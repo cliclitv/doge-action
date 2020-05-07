@@ -1,10 +1,14 @@
 name: 'Doge'
 description: 'Update files to doge cdn.'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  ak:  # id of input
+    description: 'AK'
     required: true
-    default: 'World'
+    default: '111'
+  sk:  # id of input
+    description: 'SK'
+    required: true
+    default: '222'  
 outputs:
   time: # id of output
     description: 'The time we greeted you'
