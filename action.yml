@@ -1,17 +1,12 @@
 name: 'Doge'
 description: 'Update files to doge cdn.'
 inputs:
-  ak:  # id of input
-    description: 'AK'
+  file:
+    description: 'upload file'
     required: true
-    default: '111'
-  sk:  # id of input
-    description: 'SK'
-    required: true
-    default: '222'  
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  data:
+    description: 'output data'
 runs:
   using: 'node12'
   main: './dist/index.js'

@@ -1,11 +1,12 @@
 const core = require('@actions/core')
 const crypto = require('crypto')
 const axios = require('axios')
+const fs = require
 
 try {
-  const key = core.getInput('key')
+  const key = core.getInput('file')
   upload(key).then(res=>{
-    core.setOutput('success', res)
+    core.setOutput('data', res.data)
   })
   
   
@@ -27,6 +28,9 @@ function getToken(uri) {
 function upload(key){
   let uri = `/oss/upload/put.json?bucket=clicli&key=${key}`
   let token = getToken(uri)
+  console.log(token)
+  const form = new FormData()
+  
   return axios
     .post(`https://api.dogecloud.com/${uri}`, {
       headers: {
