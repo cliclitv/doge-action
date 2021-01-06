@@ -22,6 +22,6 @@
     "@actions/core": "^1.2.4",
     "@actions/github": "^2.1.1",
     "@zeit/ncc": "^0.22.1",
-    "axios": "^0.19.2"
+    "axios": "^0.21.1"
   }
 }
